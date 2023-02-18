@@ -1,0 +1,68 @@
+@import url(https://2noscript.github.io/notes/css/reset.css);
+
+body {
+	overflow: hidden;
+}
+.container {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	backdrop-filter: blur(5rem);
+	z-index: 1000;
+}
+
+.bg {
+	width: 100vw;
+	height: 100vh;
+	object-fit: fill;
+	object-position: center center;
+}
+
+.bg-drop {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 999;
+	background: #746b721f;
+	backdrop-filter: blur(6rem);
+}
+.card {
+	overflow: hidden;
+	height: 380rem;
+	width: 40rem;
+	transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95), opacity 0.5s ease-out;
+	cursor: pointer;
+	opacity: 0.8;
+	padding: 2rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 16rem;
+	background-image: linear-gradient(43deg, #273ca1 0%, #851c7f 46%, #c08f34 100%);
+	background: transparent;
+}
+
+.card img {
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+	object-position: left;
+	transition: all 0.4s ease-in-out 0s;
+	border-radius: 16rem;
+	opacity: 0.9;
+}
+
+.card-active {
+	width: 285rem;
+	opacity: 1;
+}
+
+.card-active img {
+	opacity: 1;
+}
